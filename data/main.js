@@ -75,6 +75,7 @@ function fncConnect() {
     document.getElementById("WifiSeetingCard").style.display = "none";
     document.getElementById("wifiListCard").style.display = "none";
     document.getElementById("LoderCard").style.display = "block";
+    document.getElementById("loadertext").innerHTML = '<h2>Bağlaniyor...</h2>';
 
     var data = JSON.stringify(
         {
@@ -173,6 +174,8 @@ function  fncWifiListItem(i) {
 function fncwifiScane() {
     document.getElementById("LoderCard").style.display = "block";
     document.getElementById("wifiListCard").style.display = "none";
+    document.getElementById("loadertext").innerHTML = '<h2>WiFi araniyor...</h2>';
+    
     ListTimer = setTimeout(fncListWifi, 10000, '{ "Number" : 0}');
 
     var xmlHttp = new XMLHttpRequest();
