@@ -1,0 +1,330 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: white;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #143642;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #143642;
+}
+
+body {
+    margin: 0;
+}
+
+.content {
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #F8F7F9;
+    ;
+    box-shadow: 2px 2px 12px 1px rgba(140, 140, 140, .5);
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.button {
+    padding: 15px 50px;
+    font-size: 24px;
+    text-align: center;
+    outline: none;
+    color: #fff;
+    background-color: #0f8b8d;
+    border: none;
+    border-radius: 5px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.button:hover {
+    background-color: #0f8b8d
+}
+
+.button:active {
+    background-color: #0f8b8d;
+    box-shadow: 2 2px #CDCDCD;
+    transform: translateY(2px);
+}
+
+.state {
+    font-size: 1.5rem;
+    color: #8c8c8c;
+    font-weight: bold;
+}
+
+.input-group-prepend {
+    display: flex;
+    height: 40px;
+    margin: auto;
+    padding: 10px;
+    max-width: 400px;
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: .375rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.input-ssid {
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+.form-control {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+.ipInput {
+    font-weight: bold;
+    font-size: 15px;
+    width: 190px;
+}
+
+.input-button {
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+.wifi_title {
+    color: #143642;
+}
+
+.input_password {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.loder_card{
+    padding: 50px;
+}
+
+.loadersection {
+    margin-top: 20px;
+}
+
+.loader {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: 16px solid #e0e0e0;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.connetinfo {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 25;
+    font-size: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+
+
+.staticIPinfo {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(180, 180, 180);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-ipaddress {
+    max-width: 28rem;
+    margin: auto;
+}
+
+.InputType {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0a5275;
+}
+
+.point {
+    margin: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Ipcol {
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+}
+
+
+.wifiName,
+.encryption,
+.RSSI {
+    position: relative;
+    margin-right: 20px;
+}
+
+.wifiName {
+    height: 10px;
+    width: 300px;
+    text-align: initial;
+    margin-left: 0px;
+}
+
+.encryption {
+    height: 10px;
+    width: 20px;
+    margin-left: 80px;
+}
+
+.RSSI {
+    height: 10px;
+    width: 20px;
+    margin-left: 50px;
+}
+
+.listwifi {
+    background-color: #143642;
+    line-height: 20px;
+    font-size: 15px;
+    text-align: end;
+    margin: 5px;
+    padding-left: 0px;
+}
+
+.dot {
+    color: #143642;
+}
+
+.connInfo {
+    color: #0aad41;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+#LoderCard,
+#wifiListCard,
+#connetInfoTable { 
+    display: none;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>ESP32 WiFi Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="topnav">
+        <h1> ESP32 #01 ESP32 WiFi Manager</h1>
+    </div>
+    <div class="content">
+
+        <div id="WifiSeetingCard">
+            <div class="card">
+
+                <div>
+                    <h1 class="wifi_title"> WiFi Ayarlari </h1>
+                </div>
+
+                <div class="col" id="connetInfoTable">
+                    <div class="dot connInfo">
+                        <svg width="30" height="30" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                            <path
+                                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+                        </svg>
+                    </div>
+                    <div class="connInfo"> SSID : <span id="connectionSSID"></span></div>
+                    <div class="connInfo"> IP : <span id="connectionIP"></span></div>
+                </div>
+
+
+                <div class="input-group-prepend">
+                    <div class="input-group-text input-ssid"> Name </div>
+                    <input type="text" class="form-control ipInput" id="id_ssd_name">
+                    <input type="button" onclick="fncwifiScane()" class="button input-button" value="Ara">
+                </div>
+
+                <div class="input-group-prepend">
+                    <div class="input-group-text input_password"> Sifre </div>
+                    <input type="password" class="form-control ipInput" id="id_Sifre">
+                </div>
+
+                <div class="col Ipcol">
+                    <label class="switch switchIP">
+                        <input type="checkbox" id="staticIPCheckBox" onclick="fncStaticIP()">
+                        <div class="slider round"></div>
+                    </label>
+                    <p class="connetinfo staticIPinfo"><span id="_staticIPToggal">Sabit IP</span> </p>
+                </div>
+
+                <div id="staticIPsection">
+
+                    <div role="group" class="input-group input-ipaddress">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text ipaddtag">IP Adresi
+                            </div>
+                            <input type="text" class="form-control InputType IPinput" id="IdStaticIP_0"
+                                placeholder="xxx" value="192">
+                            <p class="point"> . </p>
+                            <input type="text" class="form-control InputType IPinput" id="IdStaticIP_1"
+                                placeholder="xxx" value="168">
+                            <p class="point"> . </p>
+                            <input type="text" class="form-control InputType IPinput" id="IdStaticIP_2"
+                                placeholder="xxx" value="4">
+                            <p class="point"> . </p>
+                            <input type="text" class="form-control InputType IPinput" id="IdStaticIP_3"
+                                placeholder="xxx" value="2">
+                        </div>
+                    </div>
+
+                    <div role="group" class="input-group input-ipaddress">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text ipaddtag">Gateway
+                            </div>
+                            <input type="text" class="form-control InputType IPinput" id="IdGateway_0" placeholder="xxx"
+                                value="192">
+                            <p class="point"> . </p>
+                            <input type="text" class="form-control InputType IPinput" id="IdGateway_1" placeholder="xxx"
+                                value="168">
+                            <p class="point"> . </p>
+                            <input type="text" class="form-control InputType IPinput" id="IdGateway_2" placeholder="xxx"
+                                value="4">
+                            <p class="point"> . </p>
+                            <input type="text" class="form-control InputType IPinput" id="IdGateway_3" placeholder="xxx"
+                                value="1">
+                        </div>
+                    </div>
+
+                    <div role="group" class="input-group input-ipaddress">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text ipaddtag">Netmask
+                            </div>
+                            <input type="text" class="form-control InputType IPinput" id="IdNetmask_0" placeholder="xxx"
+                                value="255">
+                            <p class="point"> . </p>
+                            <input type="text" class="form-control InputType IPinput" id="IdNetmask_1" placeholder="xxx"
+                                value="255">
+                            <p class="point"> . </p>
+                            <input type="text" class="form-control InputType IPinput" id="IdNetmask_2" placeholder="xxx"
+                                value="255">
+                            <p class="point"> . </p>
+                            <input type="text" class="form-control InputType IPinput" id="IdNetmask_3" placeholder="xxx"
+                                value="0">
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <p><button onclick="fncConnect()" id="button" class="button">Baglan</button></p>
+
+            </div>
+        </div>
+
+        <div id="LoderCard" class="loadersection">
+            <div class="card loder_card">
+                <div class="loader"></div>
+                <h2>WiFi araniyor...</h2>
+            </div>
+        </div>
+
+        <div id="wifiListCard" class="loadersection">
+            <div class="card">
+                <div id="IdWiFiScaneList"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
